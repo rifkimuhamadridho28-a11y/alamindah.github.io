@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sistem Informasi Wisata</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Sistem Informasi Wisata</h1>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Destinasi</a>
+        <a href="#">Tentang</a>
+    </nav>
+</header>
+
+
+<section class="hero">
+    <h2>Temukan Tempat Wisata Terbaik</h2>
+    <p>Cari destinasi wisata favoritmu</p>
+
+    <input type="text" id="search" placeholder="Cari tempat wisata...">
+</section>
+
+
+<section class="filter">
+    <button onclick="filterWisata('all')">Semua</button>
+    <button onclick="filterWisata('alam')">Alam</button>
+    <button onclick="filterWisata('pantai')">Pantai</button>
+    <button onclick="filterWisata('budaya')">Budaya</button>
+</section>
+
+
+<section class="container" id="wisataContainer">
+
+</section>
+
+
+<div id="popup" class="popup">
+    <div class="popup-content">
+
+        <span class="close" onclick="closePopup()">×</span>
+
+        <h2 id="popupTitle"></h2>
+        <img id="popupImg">
+        <p id="popupDesc"></p>
+
+        <div class="rating">
+            Beri Rating :
+            <span onclick="rate(1)">⭐</span>
+            <span onclick="rate(2)">⭐</span>
+            <span onclick="rate(3)">⭐</span>
+            <span onclick="rate(4)">⭐</span>
+            <span onclick="rate(5)">⭐</span>
+        </div>
+
+        <p id="ratingResult"></p>
+
+    </div>
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
